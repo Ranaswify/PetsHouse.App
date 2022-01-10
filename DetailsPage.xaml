@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetsHouse.DetailsPage" Title="Pets House">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="10,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Image GridLayout.Row="0" x:Name="mypet" HeightRequest="500"/>
+                <Label GridLayout.Row="1" x:Name="petName" FontSize="Medium"/>
+                <Label GridLayout.Row="2" x:Name="petDescription" FontSize="Medium"/>
+            </Grid>
+
+        </ScrollView>
+      
+    </ContentPage.Content>
+</ContentPage>

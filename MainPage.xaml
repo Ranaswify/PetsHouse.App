@@ -1,0 +1,29 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetsHouse.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}" Title="Pets House">
+
+    <ScrollView>
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*"
+              Padding="{OnPlatform iOS='30,60,30,30', Default='20'}">
+            <CollectionView x:Name="allPets" SelectionChanged="OnPetSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <Frame Padding="2" CornerRadius="5" BackgroundColor="WhiteSmoke" Margin="10, 5">
+                                <Grid ColumnSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image GridLayout.Column="0" Source="{Binding ImagePet}"  HeightRequest="100" WidthRequest="100"/>
+                                    <Label GridLayout.Column="1" Text="{Binding Name}" Margin="10" FontSize="Medium" FontAttributes="Bold" />
+                                </Grid>
+                            </Frame>
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ScrollView>
+</ContentPage>
